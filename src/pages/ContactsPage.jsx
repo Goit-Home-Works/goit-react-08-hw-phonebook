@@ -8,11 +8,10 @@ import {
   selectError,
   selectFilteredContacts,
 } from '../redux/contacts/selectors';
-import { fetchContacts, addContact } from '../redux/contacts/operations';
+import { fetchContacts } from '../redux/contacts/operations';
 import { useEffect } from 'react';
 import { Flex, Heading } from '@chakra-ui/layout';
 import { useColorModeValue } from '@chakra-ui/react';
-import { FcContacts, FcList } from 'react-icons/fc';
 
 export default function ContactsPage() {
   const bgColor = useColorModeValue('gray.50', 'gray.700');
