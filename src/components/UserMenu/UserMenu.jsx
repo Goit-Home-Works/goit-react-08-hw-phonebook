@@ -3,6 +3,7 @@ import { Badge, Flex, Text } from '@chakra-ui/react';
 import { LogoutBTN } from '../Buttons/Buttons';
 import { useAuth } from '../../hooks';
 import { logOut } from '../../redux/auth/operations';
+import { Link } from 'react-router-dom'
 
 export const UserMenu = () => {
   const dispatch = useDispatch();
@@ -16,10 +17,12 @@ export const UserMenu = () => {
           style={{
             color: 'var(--chakra-colors-blue-500)'
           }}>
-        {user.name}{' '}
+        {user.name}{' '}{
+
+        } 
       </Badge>
     </Text>
-
+    <Link to= '/profile'>see profile</Link>
     <LogoutBTN handleLogOut={() => dispatch(logOut())} />
   </Flex>
   );
